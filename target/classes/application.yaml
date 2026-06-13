@@ -1,0 +1,27 @@
+spring:
+  application:
+    name: url-shortener
+  datasource:
+    url: jdbc:postgresql://localhost:5432/urlshortenerdb
+    username: postgres
+    password: root
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+
+jwt:
+  secret: 02cd4935d9c50fa63457b14f105a0312722ead3fe1a5d88a51d8f79de0766297
+  expiration: 172800000
+
+logging:
+  level:
+    org:
+      springframework:
+        security: DEBUG
+    url:
+      shortener: DEBUG
